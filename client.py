@@ -46,17 +46,3 @@ def delete_one_document(collection_name, query):
 
 def delete_many_documents(collection_name, query):
     return send_request("delete_many", {"collection_name": collection_name, "query": query})
-
-
-if __name__ == "__main__":
-    print(create_collection("users"))
-    print(insert_document("users", {"name": "Alice", "age": 25}))
-    print(insert_many_documents("users", [{"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]))
-    print(find_documents("users"))
-    print(find_by_field("users", "name", "Alice"))
-    print(update_documents("users", {"name": "Alice"}, {"age": 26}))
-    print(delete_one_document("users", {"name": "Charlie"}))
-    print(delete_many_documents("users", {"age": 30}))
-    print(get_all_collections())
-    print(get_collection("users"))
-    print(drop_collection("users"))

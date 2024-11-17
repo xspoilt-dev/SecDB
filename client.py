@@ -1,6 +1,6 @@
 import requests
 
-SERVER_URL = "http://127.0.0.1:5000/db"
+SERVER_URL = "<server_url>/db"
 
 
 def send_request(action, data):
